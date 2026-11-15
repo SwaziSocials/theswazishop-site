@@ -36,7 +36,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 nav{display:flex;gap:22px;font-size:13px}
 nav a{text-decoration:none;color:var(--dim)}
 nav a:hover{color:var(--ink)}
-header .btn{padding:10px 18px;font-size:12px}
+header .btn{padding:10px 18px;font-size:12px;gap:0;white-space:pre}
 @media(max-width:860px){nav{display:none}.logo small{display:none}header .btn .long{display:none}}
 
 /* hero */
@@ -47,10 +47,10 @@ header .btn{padding:10px 18px;font-size:12px}
 .badges{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-size:12px;color:var(--dim)}
 .badges span::before{content:"✦ ";color:var(--gold)}
 .stage{position:relative;overflow:visible;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:center}
-.bigword{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(70px,11vw,150px);letter-spacing:.04em;color:rgba(47,74,43,.10);white-space:nowrap;pointer-events:none;transition:opacity .6s}
+.bigword{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(70px,11vw,150px);letter-spacing:.04em;color:rgba(47,74,43,.13);white-space:nowrap;pointer-events:none;z-index:1;transition:opacity .6s}
 .bigword.out{opacity:0}
-.stage .disc{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0,var(--sage) 62%,rgba(223,230,211,0) 72%)}
-.stage .prod{position:absolute;inset:12% 18% 16%;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px) scale(.94) rotate(-4deg);transition:opacity .7s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.stage .disc{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.75) 0,rgba(223,230,211,.7) 62%,rgba(223,230,211,0) 72%)}
+.stage .prod{z-index:2;position:absolute;inset:12% 18% 16%;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px) scale(.94) rotate(-4deg);transition:opacity .7s,transform .9s cubic-bezier(.2,.8,.2,1)}
 .stage .prod.on{opacity:1;transform:none}
 .stage .prod img{max-height:100%;width:auto;filter:drop-shadow(0 28px 30px rgba(31,26,20,.28));animation:bob 5s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-12px) rotate(1.5deg)}}
